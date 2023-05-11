@@ -7,6 +7,24 @@
   border-color: #e5e7eb;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
 body {
   margin: 0;
   line-height: inherit;
@@ -163,6 +181,7 @@ body {
   display: flex;
   align-items: center;
   background-color: #e1dcdc;
+  cursor: pointer;
 }
 
 .search__result:hover {
@@ -213,7 +232,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 2rem;
-  justify-content: center;
 }
 
 .search-result__content-item {
@@ -251,4 +269,44 @@ body {
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 550px) {
+  .home__greetings {
+    padding: 1px;
+  }
+  .home-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .home__greetings-greet {
+    font-size: 20px;
+  }
+  .home__greetings-time {
+    font-size: 30px;
+  }
+  .home__search-logo-input-container {
+    width: 90%;
+  }
+  .flex-center {
+    font-size: 10px;
+    width: 25%;
+  }
+  .flex-center > img {
+    width: 80% !important;
+  }
+  .search-result__content-item {
+    width: 100vw;
+  }
+  .search-result__content {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .search-result__info-container {
+    font-size: 10px;
+  }
+  .user-icon {
+    width: 15px;
+    height: 15px;
+  }
 }

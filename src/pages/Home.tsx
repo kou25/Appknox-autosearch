@@ -42,7 +42,7 @@ export const Home = () => {
   }
 
   return (
-    <div className="container home">
+    <div className="container home" id="home">
       <div className="flex-between">
         <div className="home__main">
           <div className="home__greetings">
@@ -74,9 +74,13 @@ export const Home = () => {
               />
 
               {!initialTouch && results && results.length > 0 ? (
-                <SearchResultsList results={results} />
+                <SearchResultsList results={results} input={input} />
               ) : initialTouch ? (
-                <SearchResultsList results={results} history={history} />
+                <SearchResultsList
+                  results={results}
+                  history={history}
+                  input={input}
+                />
               ) : (
                 <></>
               )}

@@ -57,6 +57,9 @@ export const SearchBar = ({
     if (e === "Enter") {
       setSubmited(true);
     }
+    if (e === "Escape") {
+      setInitalTouch(false);
+    }
   };
 
   return (
@@ -69,7 +72,6 @@ export const SearchBar = ({
         onChange={(e) => handleChange(e.target.value as string)}
         onKeyDown={(e) => handleSubmit(e.key as string)}
         onFocus={() => setInitalTouch(true)}
-        onBlur={() => setInitalTouch(false)}
       />
       <div
         className="close-icon"

@@ -33,7 +33,8 @@ export const SearchResults = () => {
         </div>
       </div>
       <div className="search-result__content">
-        {users.length > 0 && users.map((user) => <UserInfo user={user} />)}
+        {users.length > 0 &&
+          users.map((user, i) => <UserInfo user={user} key={i} />)}
       </div>
     </div>
   );

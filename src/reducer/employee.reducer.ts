@@ -48,7 +48,9 @@ export const reducer = (state: StateContext, action: SearchAction) => {
     case SearchActionKind.HISTORY:
       return {
         ...state,
-        history: [action.payload].concat(state.history)
+        history: !state.history.includes(action.payload)
+          ? [action.payload].concat(state.history)
+          : state.history
       };
 
     default:
